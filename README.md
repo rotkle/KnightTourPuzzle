@@ -14,7 +14,7 @@ The program implemented Warnsdorff's Rule in the file **'WarnsdorffRuleSolution.
 - We can start from any initial position of the knight on the board
 - The knight is moved so that it always proceeds to the square from which the knight will have the fewest onward moves. When calculating the number of onward moves for each candidate square, we do not count moves that revisit any square already visited
 
-This approach is recommended on any kind of boards and will found the solution in linear time. Let assume N = 8, time complexity for this approach is **O(8 *8*64)**, **~4096** operations. This approach can found the solution in just milliseconds.
+This approach is recommended on any kind of boards and will found the solution in linear time. Let assume N = 8, time complexity for this approach is **O(8^4)**, **~4096** operations. This approach can found the solution in just milliseconds.
 
 By default, the program will use Warnsdorff's Rule algorithm.
 
