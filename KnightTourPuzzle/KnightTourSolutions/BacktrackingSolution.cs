@@ -23,7 +23,7 @@ namespace KnightTourPuzzle.KnightTourSolutions
         public bool CalculateKnightMoves(int curX, int curY, List<List<int>> board, int moveNumber)
         {
             // Calculate next possible moves of Knight base on it's current position
-            List<Square> possibleSquares = Helper.CalculateNextPossibleMoves(curX, curY, board, board.Count);
+            List<Square> possibleSquares = Helper.CalculateNextPossibleMoves(curX, curY, board);
 
             // Solution found -> return result
             if (moveNumber == BoardConstants.TOTAL_SQUARE_OF_BOARD)

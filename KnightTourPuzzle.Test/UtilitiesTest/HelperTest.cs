@@ -46,7 +46,7 @@ namespace KnightTourPuzzle.Test.UtilitiesTest
                 board[6][0] = 0;
 
                 // Act
-                var result = Helper.CalculateNextPossibleMoves(initX, initY, board, 8);
+                var result = Helper.CalculateNextPossibleMoves(initX, initY, board);
 
                 // Assert
                 Assert.Single(result);
@@ -68,7 +68,7 @@ namespace KnightTourPuzzle.Test.UtilitiesTest
                 board[6][0] = 0;
 
                 // Act
-                var result = Helper.CalculateNextPossibleMoves(initX, initY, board, 8);
+                var result = Helper.CalculateNextPossibleMoves(initX, initY, board);
 
                 // Assert
                 Assert.Equal(2, result.Count);
@@ -92,7 +92,7 @@ namespace KnightTourPuzzle.Test.UtilitiesTest
                 board[6][0] = 0;
 
                 // Act
-                var result = Helper.CalculateNextPossibleMoves(initX, initY, board, 8);
+                var result = Helper.CalculateNextPossibleMoves(initX, initY, board);
 
                 // Assert
                 Assert.Equal(2, result.Count);
@@ -117,7 +117,7 @@ namespace KnightTourPuzzle.Test.UtilitiesTest
                 board[6][2] = 0;
 
                 // Act
-                var result = Helper.CalculateNextPossibleMoves(initX, initY, board, 8);
+                var result = Helper.CalculateNextPossibleMoves(initX, initY, board);
 
                 // Assert
                 Assert.Single(result);
@@ -135,7 +135,7 @@ namespace KnightTourPuzzle.Test.UtilitiesTest
                 var board = InitialBoard();
 
                 // Act
-                var result = Helper.CalculateNextPossibleMoves(initX, initY, board, 8);
+                var result = Helper.CalculateNextPossibleMoves(initX, initY, board);
 
                 // Assert
                 Assert.Equal(6, result.Count);

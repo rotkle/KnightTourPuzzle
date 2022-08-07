@@ -45,7 +45,7 @@ namespace KnightTourPuzzle.KnightTourSolutions
             int fewestOnwardMoves = 7;
 
             // Get total moves from current square
-            var totalMovesOfCurrentSquare = Helper.CalculateNextPossibleMoves(curSquare.PossitionX, curSquare.PossitionY, board, board.Count);
+            var totalMovesOfCurrentSquare = Helper.CalculateNextPossibleMoves(curSquare.PossitionX, curSquare.PossitionY, board);
 
             // Calculate total On Ward moves of each possible moves
             for (int i = 0; i < totalMovesOfCurrentSquare.Count; i++)
@@ -53,7 +53,7 @@ namespace KnightTourPuzzle.KnightTourSolutions
                 int tX = totalMovesOfCurrentSquare[i].PossitionX;
                 int tY = totalMovesOfCurrentSquare[i].PossitionY;
 
-                int totalMovesOfCurrentCandidate = Helper.CalculateNextPossibleMoves(tX, tY, board, board.Count).Count;
+                int totalMovesOfCurrentCandidate = Helper.CalculateNextPossibleMoves(tX, tY, board).Count;
 
                 // Find the fewest On Ward moves
                 if (totalMovesOfCurrentCandidate < fewestOnwardMoves)

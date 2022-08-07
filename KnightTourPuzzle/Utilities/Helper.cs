@@ -7,7 +7,7 @@ namespace KnightTourPuzzle.Utilities
 {
     public static class Helper
     {
-        public static List<Square> CalculateNextPossibleMoves(int curX, int curY, List<List<int>> board, int boardSize)
+        public static List<Square> CalculateNextPossibleMoves(int curX, int curY, List<List<int>> board)
         {
             List<Square> result = new List<Square>();
 
@@ -48,8 +48,8 @@ namespace KnightTourPuzzle.Utilities
                 }
 
                 // apply condition to choose candidate squares
-                if (nextMoveX >= 0 && nextMoveX < boardSize &&
-                    nextMoveY >= 0 && nextMoveY < boardSize &&
+                if (nextMoveX >= 0 && nextMoveX < board.Count &&
+                    nextMoveY >= 0 && nextMoveY < board[0].Count &&
                     board[nextMoveX][nextMoveY] == -1)
                 {
                     result.Add(new Square
